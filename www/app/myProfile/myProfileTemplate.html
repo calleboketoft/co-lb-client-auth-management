@@ -1,0 +1,23 @@
+<div class="container" style="padding-bottom: 50px;">
+  <h1>My Profile</h1>
+  <br>
+  <div class="row">
+    <div class="col-xs-3"><strong>accessTokenId</strong></div>
+    <div class="col-xs-9">{{ vm.accessTokenId }}</div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-xs-3">
+      <strong>change password</strong>
+    </div>
+    <div class="col-xs-3">
+      <input class="form-control" type="password" ng-model="vm.newPass" placeholder="new password">
+    </div>
+    <div class="col-xs-3">
+      <input class="form-control" type="password" ng-model="vm.newPassConfirm" placeholder="repeat">
+    </div>
+    <div class="col-xs-3">
+      <button class="btn btn-primary" ng-click="vm.updateProfile({newPass: vm.newPass, newPassConfirm: vm.newPassConfirm});">Change</button>
+    </div>
+  </div>
+</div>

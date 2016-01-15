@@ -1,0 +1,38 @@
+<div class="page-header">
+  <h2>User Edit</h2>
+</div>
+<form name="vm.userEditForm" ng-submit="vm.save()">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" ng-model="vm.user.username">
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Email</label>
+      <input type="email" class="form-control" name="email" ng-model="vm.user.email">
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Password</label>
+      <input type="password" class="form-control" name="password" ng-model="vm.user.password">
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <h4>User Roles</h4>
+      <co-selectable-items selectable-values="vm.selectableRoles" selected-values="vm.selectedRoles" trigger-reload="vm.selectableItemsReload"></co-selectable-items>
+    </div>
+  </div>
+  <div class="row" style="margin-top: 25px;">
+    <div class="col-xs-12">
+      <button type="button" class="btn btn-danger" ng-click="vm.remove()">Delete</button>
+      <button type="submit" class="btn btn-success">Save</button>
+    </div>
+  </div>
+</form>

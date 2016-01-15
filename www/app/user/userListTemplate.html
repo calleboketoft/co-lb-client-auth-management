@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="col-xs-6">
+    <div class="page-header">
+      <h2>User List
+        <button type="button" class="btn btn-success pull-right" ng-click="vm.addNew()">+ Add</button>
+      </h2>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="width: 10%">#</th>
+          <th style="width: 40%">Username</th>
+          <th style="width: 30%">Email</th>
+          <th style="width: 20%; text-align:right;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="user in vm.userList">
+          <td>{{ user.id }}</td>
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="btn btn-primary pull-right" ng-click="vm.edit(user.id)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-xs-6">
+    <div ui-view></div>
+  </div>
+</div>

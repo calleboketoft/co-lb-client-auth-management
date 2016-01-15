@@ -1,0 +1,43 @@
+<header class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <nav>
+        <ul class="nav navbar-nav">
+          <a class="navbar-brand" role="button" ui-sref="root.home">Home</a>
+          <li ng-if="vm.apiService.authorize({role: '$unauthenticated'})">
+            <a ui-sref="root.login">Log in</a>
+          </li>
+          <li ng-if="vm.apiService.authorize({role: '$unauthenticated'})">
+            <a ui-sref="root.register">Register</a>
+          </li>
+          <li ng-if="vm.apiService.authorize({role:'admin'})">
+            <a ui-sref="root.user">Users</a>
+          </li>
+          <li ng-if="vm.apiService.authorize({model: 'Role', accessType: 'READ'})">
+            <a ui-sref="root.role">Roles</a>
+          </li>
+          <li ng-if="vm.apiService.authorize({role: 'admin'})">
+            <a ui-sref="root.acl">ACL</a>
+          </li>
+          <li>
+            <a href="" ng-click="vm.switchEnv()"><em style="color: lightgray">Connected to: {{vm.apiUrl}}</em></a>
+          </li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-if="vm.apiService.authorize({role: '$authenticated'})">
+          <li>
+            <a ui-sref="root.myProfile">
+              {{ username }}&nbsp;<i class="glyphicon glyphicon-user"></i>
+            </a>
+          </li>
+          <li>
+            <a href="" ng-click="vm.coAuthenticateService.logout()">Sign out</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="header-placeholder"></div>
+<div ui-view="main" style="margin-bottom: 25px; margin-top: 50px;"></div>

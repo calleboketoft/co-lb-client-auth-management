@@ -1,0 +1,45 @@
+{
+  "name": "client-authorization-management",
+  "version": "0.1.0",
+  "main": "server.js",
+  "engines": {
+    "node": "0.10.33"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "www"
+    },
+    "dependencies": {
+      "Foxandxss/angular-toastr": "github:Foxandxss/angular-toastr@^1.4.1",
+      "angular": "github:angular/bower-angular@^1.4.2",
+      "angular-animate": "github:angular/bower-angular-animate@^1.4.2",
+      "angular-bootstrap": "github:angular-ui/bootstrap-bower@^0.13.2",
+      "angular-resource": "github:angular/bower-angular-resource@^1.4.2",
+      "angular-ui-router": "github:angular-ui/ui-router@^0.2.15",
+      "angular-ui/bootstrap": "github:angular-ui/bootstrap@^0.13.0",
+      "bootstrap": "github:twbs/bootstrap@^3.3.5",
+      "calleboketoft/co-notification": "github:calleboketoft/co-notification@master",
+      "calleboketoft/coAuthenticate": "github:calleboketoft/coAuthenticate@^0.1.0",
+      "calleboketoft/coDebug": "github:calleboketoft/coDebug@^0.1.3",
+      "calleboketoft/coSelectableItems": "github:calleboketoft/coSelectableItems@^0.1.2",
+      "css": "github:systemjs/plugin-css@^0.1.13",
+      "lodash.difference": "npm:lodash.difference@^3.2.2",
+      "text": "github:systemjs/plugin-text@^0.0.2"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.0-dev.20150818"
+    }
+  },
+  "scripts": {
+    "postinstall": "./node_modules/.bin/jspm install",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "jspm": "^0.16.0-beta.7"
+  },
+  "bundleDependencies": [
+    "express",
+    "jspm"
+  ]
+}

@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row" style="margin-top:20px;">
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="well">
+        <h3>Log in</h3>
+        <form class="form" ng-submit="vm.coAuthenticateService.login(vm.email, vm.password)" name="loginForm">
+          <div class="form-group">
+            <input class="form-control" type="email" data-ng-model="vm.email" placeholder="Email" name="email" required>
+          </div>
+          <div class="form-group">
+            <input class="form-control" type="password" data-ng-model="vm.password" placeholder="Password" name="password" required>
+          </div>
+          <br>
+          <div class="form-inline">
+            <button class="btn btn-primary" type="submit" data-ng-disabled="loginForm.$invalid">
+              Log in
+            </button>&nbsp;
+            <a href="" ng-click="vm.forgotPassword = true" ng-show="!vm.forgotPassword">
+              Forgot password
+            </a>
+            <button type="button" class="btn btn-primary pull-right"
+              ng-show="vm.forgotPassword"
+              ng-click="vm.apiService.requestResetPassword(vm.resetPasswordEmail)">
+              Get reset link
+            </button>
+            <input class="form-control pull-right" type="email" placeholder="email" style="margin-right: 10px;"
+              ng-model="vm.resetPasswordEmail"
+              ng-show="vm.forgotPassword">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

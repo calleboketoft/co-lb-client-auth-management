@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="col-xs-6">
+    <div class="page-header">
+      <h2>Role List
+        <button type="button" class="btn btn-success pull-right" ng-click="vm.addNew()">+ Add</button>
+      </h2>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th style="width: 40%">Name</th>
+          <th style="width: 40%">Description</th>
+          <th style="width: 20%; text-align:right;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-ng-repeat="role in vm.roleList">
+          <td>{{ role.name }}</td>
+          <td>{{ role.description }}</td>
+          <td>
+            <button class="btn btn-primary pull-right" ng-click="vm.edit(role.id)">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-xs-6">
+    <div ui-view></div>
+  </div>
+</div>

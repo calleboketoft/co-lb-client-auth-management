@@ -1,0 +1,20 @@
+<form ng-submit="vm.saveNew()" name="addModalForm" co-indicate-saving="vm.isSaving">
+  <div class="modal-header">
+    <h3>{{ vm.options.header }}</h3>
+  </div>
+  <div class="modal-body">
+    <div class="row" ng-repeat="modelProperty in vm.options.modelProperties">
+      <div class="col-xs-12">
+        <div class="form-group" co-basic-validation>
+          <label>{{ modelProperty.label }}</label>
+          <input type="{{ modelProperty.inputType }}" class="form-control" placeholder="{{ modelProperty.placeholder }}"
+          name="newProperty" required ng-model="vm.options.newData.data[modelProperty.propertyName]">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer" co-submit-buttons="enabledPristine">
+    <button type="button" class="btn btn-default" ng-click="vm.cancelNew()">Cancel</button>
+    <button type="submit" class="btn btn-success">Save</button>
+  </div>
+</form>

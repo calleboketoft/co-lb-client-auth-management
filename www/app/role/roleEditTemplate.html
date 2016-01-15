@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h2>Role Edit</h2>
+</div>
+<form name="vm.roleEditForm" ng-submit="vm.save()">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Name</label>
+      <input type="text" class="form-control" name="name" ng-model="vm.role.name">
+    </div>
+  </div>
+  <p>&nbsp;</p>
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Description</label>
+      <input type="text" class="form-control" name="description" ng-model="vm.role.description">
+    </div>
+  </div>
+  <div class="row" style="margin-top: 25px;">
+    <div class="col-xs-12">
+      <button type="button" class="btn btn-danger" ng-click="vm.remove()">Delete</button>
+      <button type="submit" class="btn btn-success">Save</button>
+    </div>
+  </div>
+</form>
