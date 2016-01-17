@@ -39,7 +39,7 @@ System.config({
     "github:angular/bower-angular-animate@1.4.3": {
       "angular": "github:angular/bower-angular@1.4.3"
     },
-    "github:calleboketoft/coAuthenticate@0.1.4": {
+    "github:calleboketoft/coAuthenticate@0.1.5": {
       "angular": "github:angular/bower-angular@1.4.3",
       "angular-ui-router": "github:angular-ui/ui-router@0.2.15"
     },
