@@ -1,7 +1,7 @@
 import RegisterController from './RegisterController'
 import registerTemplate from './registerTemplate.html!text'
 
-angular.module('coApp.register', ['ui.router'])
+export default angular.module('coApp.register', ['ui.router'])
   .controller('RegisterController', RegisterController)
   .config(configFunction)
 

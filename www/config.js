@@ -26,7 +26,7 @@ System.config({
     "angular-ui/bootstrap": "github:angular-ui/bootstrap@0.13.2",
     "bootstrap": "github:twbs/bootstrap@3.3.5",
     "calleboketoft/co-notification": "github:calleboketoft/co-notification@0.0.4",
-    "calleboketoft/coAuthenticate": "github:calleboketoft/coAuthenticate@0.1.0",
+    "calleboketoft/coAuthenticate": "github:calleboketoft/coAuthenticate@0.1.4",
     "calleboketoft/coDebug": "github:calleboketoft/coDebug@0.1.4",
     "calleboketoft/coSelectableItems": "github:calleboketoft/coSelectableItems@0.1.5",
     "css": "github:systemjs/plugin-css@0.1.13",
@@ -39,7 +39,7 @@ System.config({
     "github:angular/bower-angular-animate@1.4.3": {
       "angular": "github:angular/bower-angular@1.4.3"
     },
-    "github:calleboketoft/coAuthenticate@0.1.0": {
+    "github:calleboketoft/coAuthenticate@0.1.4": {
       "angular": "github:angular/bower-angular@1.4.3",
       "angular-ui-router": "github:angular-ui/ui-router@0.2.15"
     },
